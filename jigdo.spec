@@ -31,14 +31,12 @@ problemy jakie niesie obs³uga du¿ych plików biednym administratorom.
 %setup -q
 
 %build
-#rm -f missing
+rm -f missing
 %{__libtoolize}
-#%{__gettextize}
-#%{__aclocal}
-#%{__autoconf}
-#%{__autoheader}
-#%{__automake}
-%configure2_13
+%{__gettextize}
+%{__aclocal}
+%{__autoconf}
+%configure
 %{__make}
 
 %install
