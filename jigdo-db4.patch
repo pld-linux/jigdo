@@ -1,0 +1,28 @@
+--- jigdo-0.7.0/src/cachefile.cc.orig	Mon Mar  3 20:47:16 2003
++++ jigdo-0.7.0/src/cachefile.cc	Fri Jun 13 09:48:26 2003
+@@ -36,7 +36,11 @@
+   db->set_cachesize(db, 0, 4*1024*1024, 1);
+ 
+   // Use a btree, create database file if not yet present
++#if (DB_VERSION_MAJOR>4) || ((DB_VERSION_MAJOR==4) && (DB_VERSION_MINOR>=1))
++  e = db->open(db, NULL, dbName, "jigdo filecache v0", DB_BTREE, DB_CREATE, 0666);
++#else
+   e = db->open(db, dbName, "jigdo filecache v0", DB_BTREE, DB_CREATE, 0666);
++#endif
+   if (e != 0) {
+     // Re-close, in case it is necessary
+     db->close(db, 0);
+@@ -47,8 +51,13 @@
+ #   if DEBUG
+     cerr << "Cache file corrupt, recreating it" << endl;
+ #   endif
++#if (DB_VERSION_MAJOR>4) || ((DB_VERSION_MAJOR==4) && (DB_VERSION_MINOR>=1))
++    if (db->open(db, NULL, dbName, "jigdo filecache v0", DB_BTREE,
++                 DB_CREATE | DB_TRUNCATE, 0666) != 0)
++#else
+     if (db->open(db, dbName, "jigdo filecache v0", DB_BTREE,
+                  DB_CREATE | DB_TRUNCATE, 0666) != 0)
++#endif
+       throw DbError(e);
+   }
+ 
