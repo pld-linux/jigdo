@@ -1,9 +1,10 @@
-# TODO: s/db3/db/
+# TODO: s/db3/db/, make it build (problems with po stages)
+#
 Summary:	jigdo - Jigsaw Download - easy the distribution of very large files
 Summary(pl):	jigdo - ³atwa dystrybucja du¿ych plików
 Name:		jigdo
 Version:	0.7.0
-Release:	1
+Release:	0.1
 License:	GPL
 Group:		Applications
 Source0:	http://home.in.tum.de/~atterer/%{name}/%{name}-%{version}.tar.bz2
