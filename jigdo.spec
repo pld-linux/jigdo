@@ -2,7 +2,7 @@ Summary:	jigdo - Jigsaw Download - easy the distribution of very large files
 Summary(pl):	jigdo - ³atwa dystrybucja du¿ych plików
 Name:		jigdo
 Version:	0.6.9
-Release:	0.2
+Release:	1
 License:	GPL
 Group:		Applications
 Source0:	http://home.in.tum.de/~atterer/${name}/%{name}-%{version}.tar.bz2
@@ -50,7 +50,7 @@ install -d $RPM_BUILD_ROOT
 %find_lang %{name}
 
 %clean
-#rm -rf $RPM_BUILD_ROOT
+rm -rf $RPM_BUILD_ROOT
 
 %files -f %{name}.lang
 %defattr(644,root,root,755)
