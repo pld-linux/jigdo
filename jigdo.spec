@@ -32,7 +32,7 @@ problemy jakie niesie obs³uga du¿ych plików biednym administratorom.
 
 %build
 #rm -f missing
-#%{__libtoolize}
+%{__libtoolize}
 #%{__gettextize}
 #%{__aclocal}
 #%{__autoconf}
@@ -47,10 +47,12 @@ install -d $RPM_BUILD_ROOT
 
 %{__make} install DESTDIR=$RPM_BUILD_ROOT
 
+%find_lang %{name}
+
 %clean
 #rm -rf $RPM_BUILD_ROOT
 
-%files
+%files -f %{name}.lang
 %defattr(644,root,root,755)
 %doc README THANKS changelog
 %attr(755,root,root) %{_bindir}/*
