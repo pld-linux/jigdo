@@ -7,6 +7,10 @@ License:	GPL
 Group:		Applications
 Source0:	http://home.in.tum.de/~atterer/${name}/%{name}-%{version}.tar.bz2
 URL:		http://home.in.tum.de/~atterer/jigdo/
+BuildRequires:	db3-devel
+BuildRequires:	ImageMagick-devel
+BuildRequires:	w3c-libwww-devel
+BuildRequires:	openssl-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -24,7 +28,7 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 #%{__autoconf}
 #%{__autoheader}
 #%{__automake}
-%configure2_13
+%configure2_13 --with-gui
 %{__make}
 
 %install
