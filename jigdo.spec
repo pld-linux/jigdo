@@ -1,3 +1,4 @@
+# TODO: s/db3/db/
 Summary:	jigdo - Jigsaw Download - easy the distribution of very large files
 Summary(pl):	jigdo - ³atwa dystrybucja du¿ych plików
 Name:		jigdo
@@ -7,10 +8,14 @@ License:	GPL
 Group:		Applications
 Source0:	http://home.in.tum.de/~atterer/${name}/%{name}-%{version}.tar.bz2
 URL:		http://home.in.tum.de/~atterer/jigdo/
-BuildRequires:	db3-devel
 BuildRequires:	ImageMagick-devel
-BuildRequires:	w3c-libwww-devel
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	db3-devel
+BuildRequires:	gettext-devel
+BuildRequires:	libtool
 BuildRequires:	openssl-devel
+BuildRequires:	w3c-libwww-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -23,8 +28,8 @@ such large files.
 
 %description -l pl
 jigdo to narzêdzie do ³atwej dystrybucji bardzo du¿ych plików
-w Internecie, na przyk³ad obrazów CD lub DVD. Latwo¶æ ¶ci±gania
-polega tylko na klikniêciu linku w twojej przegl±darce, omijaj±c
+w Internecie, na przyk³ad obrazów CD lub DVD. £atwo¶æ ¶ci±gania
+polega tylko na klikniêciu odno¶nika w przegl±darce, omijaj±c
 problemy jakie niesie hostowanie du¿ych plików administratorom.
 
 %prep
