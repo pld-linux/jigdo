@@ -14,7 +14,7 @@ BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	db-devel
 BuildRequires:	libtool
-BuildRequires:	openssl-devel
+BuildRequires:	openssl-devel >= 0.9.7d
 BuildRequires:	w3c-libwww-devel
 BuildRequires:	gtk+2-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
