@@ -16,6 +16,7 @@ BuildRequires:	db-devel
 BuildRequires:	libtool
 BuildRequires:	openssl-devel
 BuildRequires:	w3c-libwww-devel
+BuildRequires:  gtk+2-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
