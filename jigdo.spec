@@ -6,7 +6,7 @@ Version:	0.6.9
 Release:	1
 License:	GPL
 Group:		Applications
-Source0:	http://home.in.tum.de/~atterer/${name}/%{name}-%{version}.tar.bz2
+Source0:	http://home.in.tum.de/~atterer/%{name}/%{name}-%{version}.tar.bz2
 URL:		http://home.in.tum.de/~atterer/jigdo/
 BuildRequires:	ImageMagick-devel
 BuildRequires:	autoconf
