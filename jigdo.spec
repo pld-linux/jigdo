@@ -25,7 +25,7 @@ such large files.
 jigdo to narzêdzie do ³atwej dystrybucji bardzo du¿ych plików
 w Internecie, na przyk³ad obrazów CD lub DVD. Latwo¶æ ¶ci±gania
 polega tylko na klikniêciu linku w twojej przegl±darce, omijaj±c
-problemy jakie niesie obs³uga du¿ych plików biednym administratorom.
+problemy jakie niesie hostowanie du¿ych plików administratorom.
 
 %prep
 %setup -q
@@ -36,7 +36,7 @@ rm -f missing
 %{__gettextize}
 %{__aclocal}
 %{__autoconf}
-%configure
+%configure --with-gui
 %{__make}
 
 %install
