@@ -1,5 +1,3 @@
-# TODO: s/db3/db/, make it build (problems with po stages)
-#
 Summary:	jigdo - Jigsaw Download - easy the distribution of very large files
 Summary(pl):	jigdo - ³atwa dystrybucja du¿ych plików
 Name:		jigdo
@@ -9,12 +7,12 @@ License:	GPL
 Group:		Applications
 Source0:	http://home.in.tum.de/~atterer/%{name}/%{name}-%{version}.tar.bz2
 # Source0-md5:	a1960f7b269c1842d2013eae0abfc3eb
+Patch0:		%{name}-db4.patch
 URL:		http://home.in.tum.de/~atterer/jigdo/
 BuildRequires:	ImageMagick-devel
 BuildRequires:	autoconf
 BuildRequires:	automake
-BuildRequires:	db3-devel
-BuildRequires:	gettext-devel
+BuildRequires:	db-devel
 BuildRequires:	libtool
 BuildRequires:	openssl-devel
 BuildRequires:	w3c-libwww-devel
@@ -36,14 +34,15 @@ problemy jakie niesie hostowanie du¿ych plików administratorom.
 
 %prep
 %setup -q
+%patch -p1
 
 %build
 rm -f missing
 %{__libtoolize}
-%{__gettextize}
 %{__aclocal}
 %{__autoconf}
-%configure --with-gui
+%configure \
+	--with-gui
 %{__make}
 
 %install
