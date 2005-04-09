@@ -5,7 +5,7 @@ Version:	0.7.1
 Release:	1
 License:	GPL
 Group:		Applications
-Source0:	http://atterer.net/%{name}/%{name}-%{version}.tar.bz2
+Source0:	http://atterer.net/jigdo/%{name}-%{version}.tar.bz2
 # Source0-md5:	aa9aa42923af90d09b6ff4a878b8d53a
 URL:		http://atterer.net/jigdo/
 BuildRequires:	ImageMagick-devel
