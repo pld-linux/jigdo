@@ -12,12 +12,12 @@ BuildRequires:	ImageMagick-devel
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	db-devel
-BuildRequires:	libtool
+BuildRequires:	gtk+2-devel
 BuildRequires:	libstdc++-devel
+BuildRequires:	libtool
 BuildRequires:	openssl-devel >= 0.9.7d
 BuildRequires:	pkgconfig
 BuildRequires:	w3c-libwww-devel
-BuildRequires:	gtk+2-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
