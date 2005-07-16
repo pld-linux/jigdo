@@ -1,23 +1,22 @@
 Summary:	jigdo - Jigsaw Download - easy the distribution of very large files
 Summary(pl):	jigdo - ³atwa dystrybucja du¿ych plików
 Name:		jigdo
-Version:	0.7.1
+Version:	0.7.2
 Release:	1
-License:	GPL
+License:	GPL v2
 Group:		Applications
 Source0:	http://atterer.net/jigdo/%{name}-%{version}.tar.bz2
-# Source0-md5:	aa9aa42923af90d09b6ff4a878b8d53a
+# Source0-md5:	031756ff6c7084a139dc9550a27f6906
 URL:		http://atterer.net/jigdo/
 BuildRequires:	ImageMagick-devel
 BuildRequires:	autoconf
 BuildRequires:	automake
-BuildRequires:	db-devel
-BuildRequires:	gtk+2-devel
+BuildRequires:	curl-devel >= 7.11
+BuildRequires:	gtk+2-devel >= 2.4
 BuildRequires:	libstdc++-devel
 BuildRequires:	libtool
 BuildRequires:	openssl-devel >= 0.9.7d
 BuildRequires:	pkgconfig
-BuildRequires:	w3c-libwww-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -38,7 +37,6 @@ problemy jakie niesie hostowanie du¿ych plików administratorom.
 %setup -q
 
 %build
-rm -f missing
 %{__libtoolize}
 %{__aclocal}
 %{__autoconf}
@@ -48,9 +46,9 @@ rm -f missing
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT
 
-%{__make} install DESTDIR=$RPM_BUILD_ROOT
+%{__make} install \
+	DESTDIR=$RPM_BUILD_ROOT
 
 %find_lang %{name}
 
