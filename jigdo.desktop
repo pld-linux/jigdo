@@ -1,0 +1,11 @@
+[Desktop Entry]
+Name=jigdo
+Comment=Download manager of very large files
+Comment[pl]=Zarządca pobierania bardzo dużych plików
+Exec=jigdo
+Icon=jigdo.png
+Terminal=false
+Type=Application
+Encoding=UTF-8
+Categories=GTK+;Network;FileTransfer;
+# vi: encoding=utf-8
