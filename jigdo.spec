@@ -7,6 +7,8 @@ License:	GPL v2
 Group:		Applications
 Source0:	http://atterer.net/jigdo/%{name}-%{version}.tar.bz2
 # Source0-md5:	bbc1d9ac750bb34e0748f0b57157cc72
+Source1:	%{name}.desktop
+Source2:	%{name}.png
 URL:		http://atterer.net/jigdo/
 BuildRequires:	ImageMagick-devel
 BuildRequires:	autoconf
@@ -58,9 +60,13 @@ Pakiet zawiera zarz±dcê pobierania, opartego na GTK+2.
 
 %install
 rm -rf $RPM_BUILD_ROOT
+install -d $RPM_BUILD_ROOT{%{_desktopdir},%{_pixmapsdir}}
 
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
+
+install %{SOURCE1} $RPM_BUILD_ROOT%{_desktopdir}/jigdo.desktop
+install %{SOURCE2} $RPM_BUILD_ROOT%{_pixmapsdir}/jigdo.png
 
 rm -f $RPM_BUILD_ROOT%{_datadir}/%{name}/COPYING
 
@@ -82,3 +88,5 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_bindir}/jigdo
 %{_datadir}/%{name}/pixmaps
 %{_mandir}/man1/jigdo.1*
+%{_desktopdir}/*.desktop
+%{_pixmapsdir}/*.png
