@@ -7,5 +7,5 @@ Icon=jigdo.png
 Terminal=false
 Type=Application
 Encoding=UTF-8
-Categories=GTK+;Network;FileTransfer;
+Categories=GTK;Network;FileTransfer;
 # vi: encoding=utf-8
