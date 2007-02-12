@@ -1,5 +1,5 @@
 Summary:	jigdo - Jigsaw Download - easy the distribution of very large files
-Summary(pl):	jigdo - ³atwa dystrybucja du¿ych plików
+Summary(pl.UTF-8):   jigdo - Å‚atwa dystrybucja duÅ¼ych plikÃ³w
 Name:		jigdo
 Version:	0.7.3
 Release:	3
@@ -29,23 +29,23 @@ users as a click on a direct download link in a browser, while
 avoiding all the problems that server administrators have with hosting
 such large files.
 
-%description -l pl
-jigdo to narzêdzie do ³atwej dystrybucji bardzo du¿ych plików
-w Internecie, na przyk³ad obrazów CD lub DVD. £atwo¶æ ¶ci±gania
-polega tylko na klikniêciu odno¶nika w przegl±darce, omijaj±c
-problemy jakie niesie hostowanie du¿ych plików administratorom.
+%description -l pl.UTF-8
+jigdo to narzÄ™dzie do Å‚atwej dystrybucji bardzo duÅ¼ych plikÃ³w
+w Internecie, na przykÅ‚ad obrazÃ³w CD lub DVD. ÅatwoÅ›Ä‡ Å›ciÄ…gania
+polega tylko na klikniÄ™ciu odnoÅ›nika w przeglÄ…darce, omijajÄ…c
+problemy jakie niesie hostowanie duÅ¼ych plikÃ³w administratorom.
 
 %package gtk
 Summary:	GTK+2 based download manager
-Summary(pl):	Zarz±dca pobierania oparty na GTK+2
+Summary(pl.UTF-8):   ZarzÄ…dca pobierania oparty na GTK+2
 Group:		X11/Applications
 Requires:	%{name} = %{version}-%{release}
 
 %description gtk
 Provides GTK+2 based download manager. 
 
-%description gtk -l pl
-Pakiet zawiera zarz±dcê pobierania, opartego na GTK+2.
+%description gtk -l pl.UTF-8
+Pakiet zawiera zarzÄ…dcÄ™ pobierania, opartego na GTK+2.
 
 %prep
 %setup -q
