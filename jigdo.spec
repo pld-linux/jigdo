@@ -1,5 +1,5 @@
 Summary:	jigdo - Jigsaw Download - easy the distribution of very large files
-Summary(pl.UTF-8):   jigdo - łatwa dystrybucja dużych plików
+Summary(pl.UTF-8):	jigdo - łatwa dystrybucja dużych plików
 Name:		jigdo
 Version:	0.7.3
 Release:	3
@@ -37,7 +37,7 @@ problemy jakie niesie hostowanie dużych plików administratorom.
 
 %package gtk
 Summary:	GTK+2 based download manager
-Summary(pl.UTF-8):   Zarządca pobierania oparty na GTK+2
+Summary(pl.UTF-8):	Zarządca pobierania oparty na GTK+2
 Group:		X11/Applications
 Requires:	%{name} = %{version}-%{release}
 
