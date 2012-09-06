@@ -2,13 +2,14 @@ Summary:	jigdo - Jigsaw Download - easy the distribution of very large files
 Summary(pl.UTF-8):	jigdo - łatwa dystrybucja dużych plików
 Name:		jigdo
 Version:	0.7.3
-Release:	6
+Release:	7
 License:	GPL v2
 Group:		Applications
 Source0:	http://atterer.net/jigdo/%{name}-%{version}.tar.bz2
 # Source0-md5:	bbc1d9ac750bb34e0748f0b57157cc72
 Source1:	%{name}.desktop
 Source2:	%{name}.png
+Patch0:		%{name}-gcc4.patch
 URL:		http://atterer.net/jigdo/
 BuildRequires:	ImageMagick-devel
 BuildRequires:	autoconf
@@ -49,6 +50,7 @@ Pakiet zawiera zarządcę pobierania, opartego na GTK+2.
 
 %prep
 %setup -q
+%patch0 -p1
 
 %build
 %{__libtoolize}
