@@ -50,7 +50,7 @@ Pakiet zawiera zarządcę pobierania, opartego na GTK+2.
 
 %prep
 %setup -q
-%patch0 -p1
+%patch -P0 -p1
 
 %build
 %{__libtoolize}
